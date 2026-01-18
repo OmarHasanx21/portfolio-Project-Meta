@@ -24,6 +24,8 @@ li {
 .Nav-Links {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
 .Nav-Links a {
@@ -31,18 +33,19 @@ li {
   text-decoration: none;
 }
 
-@media (width: 768px) {
+@media (min-width: 768px) {
   nav {
-    display:inline-flex
+    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 40px;
   }
 
-  .nav-links {
-    display:inline-flex;
+  .Nav-Links {
+    display: flex;
     flex-direction: row;
-    margin-top: 0;
+    margin-top: 5px;
     gap: 40px;
+    text-align: center;
   }
 }
