@@ -8,9 +8,11 @@ header {
 }
 
 #Logo {
-  padding-top: 5vh;
+  padding-top: 2vh;
   width: auto;
   height: 10vh;
+  min-width: 80px;
+  min-height: 40px;
 }
 
 nav {
@@ -26,6 +28,8 @@ li {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
 .Nav-Links a {
@@ -48,4 +52,20 @@ li {
     gap: 40px;
     text-align: center;
   }
+}
+
+.Home-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+.Home-Section h1 {
+  font-size: 2.5rem;
+}
+.Home-Section p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.ProductPageButton {
 }
