@@ -217,6 +217,15 @@ li {
     inset rgba(255, 255, 255, 0.1) 0px 0px 10px;
 }
 
+/*Cart section style*/
+
+.Cart-Image {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
 /* About Page Styles */
 .About-Section {
   display: flex;
