@@ -1,12 +1,21 @@
 /* Global Body Settings: Reset margins and set main background */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background-color: #333333;
   background-image: url("Media/Background/1.png");
+  background-color: rgba(15, 15, 15, 0.8);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
 }
 /* Header and Main Container Styles */
 header {
@@ -15,7 +24,7 @@ header {
 }
 
 main {
-  background-color: rgba(15, 15, 15, 0.8);
+  flex: 1;
 }
 
 /* Logo Styling */
@@ -100,6 +109,7 @@ li {
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0)
   );
+  cursor: pointer;
   color: antiquewhite;
   text-decoration: none;
   border-radius: 50px;
@@ -116,6 +126,7 @@ li {
 .Button:hover,
 .AddToCartButton:hover,
 .ProductPageButton:hover,
+.Contact-Button:hover,
 .Nav-Links a:hover {
   background: linear-gradient(
     135deg,
@@ -131,6 +142,7 @@ li {
 .Button:active,
 .AddToCartButton:active,
 .ProductPageButton:active,
+.Contact-Button:active,
 .Nav-Links a:active {
   transform: scale(0.95);
   box-shadow:
@@ -203,4 +215,161 @@ li {
   box-shadow:
     rgba(23, 23, 23, 0.2) 0px 8px 32px 0px,
     inset rgba(255, 255, 255, 0.1) 0px 0px 10px;
+}
+
+/* About Page Styles */
+.About-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 60vh;
+}
+
+.About-Content {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+  text-align: center;
+  color: antiquewhite;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.About-Content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.About-Content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Contact Page Styles */
+.Contact-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 60vh;
+}
+
+.Contact-Content {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  color: antiquewhite;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.Contact-Content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.Contact-Content p {
+  margin-bottom: 30px;
+}
+
+.Contact-Form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.Contact-Form input,
+.Contact-Form textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.Contact-Form input::placeholder,
+.Contact-Form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Contact-Form input:focus,
+.Contact-Form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.Contact-Button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+
+  align-self: center;
+  padding: 15px 40px;
+  min-width: 200px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: antiquewhite;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #141105;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer p {
+  color: #dbdbdb;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.Footer-Links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #dbdbdb;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.Footer-Links a:hover {
+  color: #f5a801;
 }
