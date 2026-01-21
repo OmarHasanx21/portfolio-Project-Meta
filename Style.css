@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: black;
+  background-color: #333333;
 }
 header {
   text-align: center;
@@ -9,7 +9,6 @@ header {
 
 #Logo {
   padding-top: 2vh;
-  width: auto;
   height: 10vh;
   min-width: 80px;
   min-height: 40px;
@@ -26,23 +25,23 @@ li {
 .Nav-Links {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 0px;
+  gap: 10px;
 }
-
 .Nav-Links a {
-  color: antiquewhite;
-  text-decoration: none;
+  display: inline-block;
+  padding: 10px 25px;
 }
 
+/* if screen small then stack nav links vertically */
 @media (min-width: 768px) {
   nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
   }
 
   .Nav-Links {
@@ -50,7 +49,6 @@ li {
     flex-direction: row;
     margin-top: 5px;
     gap: 40px;
-    text-align: center;
   }
 }
 
@@ -59,6 +57,7 @@ li {
   justify-content: center;
   align-items: center;
   color: antiquewhite;
+  flex-direction: column;
 }
 .Home-Section h1 {
   font-size: 2.5rem;
@@ -67,5 +66,57 @@ li {
   font-size: 1.2rem;
   margin: 20px 0;
 }
+.Home-Content {
+  text-align: center;
+}
 .ProductPageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/*Button style - Applied to Nav links and Product Page Button*/
+.Button,
+.ProductPageButton,
+.Nav-Links a {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  color: antiquewhite;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.Button:hover,
+.ProductPageButton:hover,
+.Nav-Links a:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  transform: scale(1.3);
+}
+
+.Button:active,
+.ProductPageButton:active,
+.Nav-Links a:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 2px 10px 0 rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
