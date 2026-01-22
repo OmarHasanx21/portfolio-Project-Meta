@@ -20,7 +20,22 @@ body {
 /* Header and Main Container Styles */
 header {
   text-align: center;
-  background-color: #d4af37;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+
+  color: antiquewhite;
+  text-decoration: none;
+  border-radius: 0px 0px 0px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 main {
@@ -29,10 +44,11 @@ main {
 
 /* Logo Styling */
 #Logo {
-  padding-top: 2vh;
-  height: 10vh;
+  padding-top: 3vh;
+  height: 7vh;
   min-width: 80px;
-  min-height: 40px;
+  min-height: 2vh;
+  max-width: 95vw;
 }
 
 /* Navigation Menu - Mobile First Layout (Vertical Stack) */
@@ -83,10 +99,10 @@ li {
   flex-direction: column;
 }
 .Home-Section h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .Home-Section p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin: 20px 0;
 }
 .Home-Content {
@@ -115,10 +131,10 @@ li {
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   box-shadow:
-    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    0 8px 32px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 10px rgba(255, 255, 255, 0.1);
   transition: all 0.2s ease-in-out;
 }
@@ -134,9 +150,11 @@ li {
     rgba(255, 255, 255, 0.05)
   );
   box-shadow:
-    0 8px 32px 0 rgba(0, 0, 0, 0.45),
+    0 8px 32px 0 rgba(0, 0, 0, 0.2),
     inset 0 1px 1px rgba(255, 255, 255, 0.25);
   transform: scale(1.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .Button:active,
@@ -189,8 +207,8 @@ li {
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.05)
   );
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 20px;
@@ -210,8 +228,10 @@ li {
 .Product-Item:hover {
   transform: scale(1.05);
   box-shadow:
-    rgba(23, 23, 23, 0.2) 0px 8px 32px 0px,
-    inset rgba(255, 255, 255, 0.1) 0px 0px 10px;
+    0px 8px 32px 0 rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
 /*Cart section style*/
@@ -383,10 +403,31 @@ li {
 
 /* Footer Styles */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #141105;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
+}
+
+.Footer-Copyright {
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Footer-Logo,
+  .Footer-Copyright {
+    align-self: center;
+  }
 }
 
 footer p {
@@ -405,4 +446,14 @@ footer p {
 
 .Footer-Links a:hover {
   color: #f5a801;
+}
+
+.Footer-Logo {
+}
+.Footer-Logo img {
+  background-size: contain;
+  width: auto;
+  height: 7vh;
+  max-width: 100%;
+  display: block;
 }
